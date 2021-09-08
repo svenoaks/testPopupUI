@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA055B9926E925B10019167B /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA055B9826E925B10019167B /* DocumentPicker.swift */; };
 		AA126162269F9DB300ED8779 /* testPopupUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA126161269F9DB300ED8779 /* testPopupUIApp.swift */; };
 		AA126164269F9DB300ED8779 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA126163269F9DB300ED8779 /* ContentView.swift */; };
 		AA126166269F9DB400ED8779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA126165269F9DB400ED8779 /* Assets.xcassets */; };
@@ -31,7 +30,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AA055B9826E925B10019167B /* DocumentPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		AA12615E269F9DB300ED8779 /* testPopupUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testPopupUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA126161269F9DB300ED8779 /* testPopupUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPopupUIApp.swift; sourceTree = "<group>"; };
 		AA126163269F9DB300ED8779 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 		AA126160269F9DB300ED8779 /* testPopupUI */ = {
 			isa = PBXGroup;
 			children = (
-				AA055B9826E925B10019167B /* DocumentPicker.swift */,
 				AA126161269F9DB300ED8779 /* testPopupUIApp.swift */,
 				AA126163269F9DB300ED8779 /* ContentView.swift */,
 				AA126165269F9DB400ED8779 /* Assets.xcassets */,
@@ -166,7 +163,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA126164269F9DB300ED8779 /* ContentView.swift in Sources */,
-				AA055B9926E925B10019167B /* DocumentPicker.swift in Sources */,
 				AA126162269F9DB300ED8779 /* testPopupUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

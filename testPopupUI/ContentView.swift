@@ -15,6 +15,9 @@ struct ContentView: View {
     
     @State var tabSelected = 0
     
+    @State private var username: String = ""
+    @State private var isEditing = false
+    
     var tab: some View {
         ZStack {
             Color.red
@@ -30,15 +33,6 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            DocumentPicker(
-                isPresented: $showDocPicker,
-                documentTypes: ["public.audio"],
-                onCancel: {},
-                onDocumentsPicked: { urls in
-                    urls.forEach {
-                        print($0)
-                    }
-                })
             TabView(selection: $tabSelected) {
                 tab
                     .tabItem {
@@ -70,7 +64,7 @@ struct ContentView: View {
                 ZStack {
                     Text("TITLE")
                         .frame(height: 70)
-                       
+                    
                 }
                 .frame(maxWidth: .infinity)
                 .contentShape(Rectangle())
@@ -78,11 +72,27 @@ struct ContentView: View {
             .popupInteractionStyle(.drag)
             
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        .sheet(isPresented: $showDocPicker) {
+            NavigationView {
+                VStack {
+                    TextField(
+                        "User name (email address)",
+                        text: $username
+                    ) { isEditing in
+                        self.isEditing = isEditing
+                    } onCommit: {
+                        print(username)
+                    }
+                    .padding(32)
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button("Close") {
+                            showDocPicker = false
+                        }
+                    }
+                }
+            }
+        }
     }
 }
