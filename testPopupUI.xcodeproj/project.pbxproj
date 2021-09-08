@@ -3,17 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA055B9926E925B10019167B /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA055B9826E925B10019167B /* DocumentPicker.swift */; };
 		AA126162269F9DB300ED8779 /* testPopupUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA126161269F9DB300ED8779 /* testPopupUIApp.swift */; };
 		AA126164269F9DB300ED8779 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA126163269F9DB300ED8779 /* ContentView.swift */; };
 		AA126166269F9DB400ED8779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA126165269F9DB400ED8779 /* Assets.xcassets */; };
 		AA126169269F9DB400ED8779 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA126168269F9DB400ED8779 /* Preview Assets.xcassets */; };
+		AA126172269F9DDD00ED8779 /* LNPopupUI in Frameworks */ = {isa = PBXBuildFile; productRef = AA126171269F9DDD00ED8779 /* LNPopupUI */; };
+		AA126173269F9DDD00ED8779 /* LNPopupUI in Embed Frameworks */ = {isa = PBXBuildFile; productRef = AA126171269F9DDD00ED8779 /* LNPopupUI */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AA126174269F9DDD00ED8779 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AA126173269F9DDD00ED8779 /* LNPopupUI in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AA055B9826E925B10019167B /* DocumentPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		AA12615E269F9DB300ED8779 /* testPopupUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testPopupUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA126161269F9DB300ED8779 /* testPopupUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPopupUIApp.swift; sourceTree = "<group>"; };
 		AA126163269F9DB300ED8779 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA126172269F9DDD00ED8779 /* LNPopupUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +71,7 @@
 		AA126160269F9DB300ED8779 /* testPopupUI */ = {
 			isa = PBXGroup;
 			children = (
+				AA055B9826E925B10019167B /* DocumentPicker.swift */,
 				AA126161269F9DB300ED8779 /* testPopupUIApp.swift */,
 				AA126163269F9DB300ED8779 /* ContentView.swift */,
 				AA126165269F9DB400ED8779 /* Assets.xcassets */,
@@ -79,12 +99,16 @@
 				AA12615A269F9DB300ED8779 /* Sources */,
 				AA12615B269F9DB300ED8779 /* Frameworks */,
 				AA12615C269F9DB300ED8779 /* Resources */,
+				AA126174269F9DDD00ED8779 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = testPopupUI;
+			packageProductDependencies = (
+				AA126171269F9DDD00ED8779 /* LNPopupUI */,
+			);
 			productName = testPopupUI;
 			productReference = AA12615E269F9DB300ED8779 /* testPopupUI.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +136,9 @@
 				Base,
 			);
 			mainGroup = AA126155269F9DB300ED8779;
+			packageReferences = (
+				AA126170269F9DDD00ED8779 /* XCRemoteSwiftPackageReference "LNPopupUI" */,
+			);
 			productRefGroup = AA12615F269F9DB300ED8779 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA126164269F9DB300ED8779 /* ContentView.swift in Sources */,
+				AA055B9926E925B10019167B /* DocumentPicker.swift in Sources */,
 				AA126162269F9DB300ED8779 /* testPopupUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA126170269F9DDD00ED8779 /* XCRemoteSwiftPackageReference "LNPopupUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LeoNatan/LNPopupUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.14;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA126171269F9DDD00ED8779 /* LNPopupUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA126170269F9DDD00ED8779 /* XCRemoteSwiftPackageReference "LNPopupUI" */;
+			productName = LNPopupUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA126156269F9DB300ED8779 /* Project object */;
 }

@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "LNPopupController",
+        "repositoryURL": "https://github.com/LeoNatan/LNPopupController.git",
+        "state": {
+          "branch": null,
+          "revision": "a2cd909c5ed4b4d5dae7821850fb9405e32e0051",
+          "version": "2.12.4"
+        }
+      },
+      {
+        "package": "LNPopupUI",
+        "repositoryURL": "https://github.com/LeoNatan/LNPopupUI",
+        "state": {
+          "branch": null,
+          "revision": "fc3a820830716e4a2784fe0c59158ae124ab6540",
+          "version": "1.2.16"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
