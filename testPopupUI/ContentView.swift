@@ -59,15 +59,7 @@ struct ContentView: View {
                         Text("\($0) IN POPUP")
                     }
                 }
-            }
-            .popupBarCustomView {
-                ZStack {
-                    Text("TITLE")
-                        .frame(height: 70)
-                    
-                }
-                .frame(maxWidth: .infinity)
-                .contentShape(Rectangle())
+                .popupTitle("TITLE")
             }
             .popupInteractionStyle(.drag)
             
