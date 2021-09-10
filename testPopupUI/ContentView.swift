@@ -80,6 +80,7 @@ struct ContentView: View {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2, qos: .userInteractive) {
                             textField.becomeFirstResponder()
                             textField.resignFirstResponder()
+                            showDocPicker = false
                         }
                     }
                     .padding(32)
@@ -91,12 +92,6 @@ struct ContentView: View {
                         }
                     }
                 }
-            }
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2,  qos: .userInteractive) {
-                    showDocPicker = false
-                }
-                
             }
         }
     }
