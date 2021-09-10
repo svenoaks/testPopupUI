@@ -13,6 +13,7 @@
 		AA126169269F9DB400ED8779 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA126168269F9DB400ED8779 /* Preview Assets.xcassets */; };
 		AA126172269F9DDD00ED8779 /* LNPopupUI in Frameworks */ = {isa = PBXBuildFile; productRef = AA126171269F9DDD00ED8779 /* LNPopupUI */; };
 		AA126173269F9DDD00ED8779 /* LNPopupUI in Embed Frameworks */ = {isa = PBXBuildFile; productRef = AA126171269F9DDD00ED8779 /* LNPopupUI */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AA88F75C26EAD30A00001B29 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = AA88F75B26EAD30A00001B29 /* Introspect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA126172269F9DDD00ED8779 /* LNPopupUI in Frameworks */,
+				AA88F75C26EAD30A00001B29 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +107,7 @@
 			name = testPopupUI;
 			packageProductDependencies = (
 				AA126171269F9DDD00ED8779 /* LNPopupUI */,
+				AA88F75B26EAD30A00001B29 /* Introspect */,
 			);
 			productName = testPopupUI;
 			productReference = AA12615E269F9DB300ED8779 /* testPopupUI.app */;
@@ -135,6 +138,7 @@
 			mainGroup = AA126155269F9DB300ED8779;
 			packageReferences = (
 				AA126170269F9DDD00ED8779 /* XCRemoteSwiftPackageReference "LNPopupUI" */,
+				AA88F75A26EAD30A00001B29 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = AA12615F269F9DB300ED8779 /* Products */;
 			projectDirPath = "";
@@ -362,6 +366,14 @@
 				minimumVersion = 1.2.14;
 			};
 		};
+		AA88F75A26EAD30A00001B29 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -369,6 +381,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AA126170269F9DDD00ED8779 /* XCRemoteSwiftPackageReference "LNPopupUI" */;
 			productName = LNPopupUI;
+		};
+		AA88F75B26EAD30A00001B29 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA88F75A26EAD30A00001B29 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

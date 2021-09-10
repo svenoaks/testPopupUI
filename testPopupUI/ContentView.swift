@@ -7,6 +7,7 @@
 
 import SwiftUI
 import LNPopupUI
+import Introspect
 
 struct ContentView: View {
     @State var isPopupOpen = true
@@ -75,6 +76,12 @@ struct ContentView: View {
                     } onCommit: {
                         print(username)
                     }
+                    .introspectTextField { textField in
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2, qos: .userInteractive) {
+                            textField.becomeFirstResponder()
+                            textField.resignFirstResponder()
+                        }
+                    }
                     .padding(32)
                 }
                 .toolbar {
@@ -84,6 +91,12 @@ struct ContentView: View {
                         }
                     }
                 }
+            }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2,  qos: .userInteractive) {
+                    showDocPicker = false
+                }
+                
             }
         }
     }
